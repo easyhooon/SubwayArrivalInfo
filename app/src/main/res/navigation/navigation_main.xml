@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/stations_dest">
+
+    <fragment
+        android:id="@+id/stations_dest"
+        android:name="kr.ac.konkuk.subwayinfo.presentation.stations.StationsFragment"
+        tools:layout="@layout/fragment_stations">
+
+<!--        tag 로 action, argument, deep link 등을 가질 수 있음-->
+<!--        화면간의 이동을 시각화 -->
+        <action
+            android:id="@+id/to_station_arrivals_action"
+            app:destination="@id/station_arrivals_dest" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/station_arrivals_dest"
+        android:name="kr.ac.konkuk.subwayinfo.presentation.stationarrivals.StationArrivalsFragment"
+        tools:layout="@layout/fragment_station_arrivals">
+
+        <argument
+            android:name="station"
+            app:argType="kr.ac.konkuk.subwayinfo.domain.Station"/>
+
+    </fragment>
+
+</navigation>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "173038735058",
+    "project_id": "subwayinfo-7230f",
+    "storage_bucket": "subwayinfo-7230f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:173038735058:android:0f6672f5c7211d6768670b",
+        "android_client_info": {
+          "package_name": "kr.ac.konkuk.subwayinfo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "173038735058-a2koafk2311ar4ubt7jtejk9mbvu51k5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "kr.ac.konkuk.subwayinfo",
+            "certificate_hash": "c7ef690eac5a3cef2b30aa9e0005a6fda15c9116"
+          }
+        },
+        {
+          "client_id": "173038735058-qvbqm848hbn6r8284nu4telte8h080b4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9-IF-I34e3zMpx1rEzO5V7qlqVqFYYIk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "173038735058-qvbqm848hbn6r8284nu4telte8h080b4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
