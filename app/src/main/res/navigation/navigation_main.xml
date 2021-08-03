@@ -10,8 +10,6 @@
         android:name="kr.ac.konkuk.subwayinfo.presentation.stations.StationsFragment"
         tools:layout="@layout/fragment_stations">
 
-<!--        tag 로 action, argument, deep link 등을 가질 수 있음-->
-<!--        화면간의 이동을 시각화 -->
         <action
             android:id="@+id/to_station_arrivals_action"
             app:destination="@id/station_arrivals_dest" />
@@ -25,7 +23,7 @@
 
         <argument
             android:name="station"
-            app:argType="kr.ac.konkuk.subwayinfo.domain.Station"/>
+            app:argType="kr.ac.konkuk.subwayinfo.domain.Station" />
 
     </fragment>
 

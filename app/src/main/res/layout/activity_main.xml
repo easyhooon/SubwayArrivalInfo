@@ -9,10 +9,12 @@
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
+        style="@style/Widget.MaterialComponents.Toolbar.Primary"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/white"
-        android:elevation="4dp" />
+        android:elevation="4dp"
+        app:contentInsetStartWithNavigation="0dp" />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/mainNavigationHostContainer"
@@ -23,5 +25,3 @@
         app:navGraph="@navigation/navigation_main" />
 
 </LinearLayout>
-
-<!--   app:defaultNavHost="true" <- 이것을 해주지 않으면 시스템의 back 버튼의 이벤트가 그래프가 연동이 되지 않음-->
