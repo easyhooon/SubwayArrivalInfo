@@ -10,7 +10,7 @@ interface BasePresenter {
     //rx 가 아닌 coroutine 으로 진행
     val scope: CoroutineScope
         //비동기 처리
-        get() = MainScope()
+//        get() = MainScope()
 
     fun onViewCreated()
 

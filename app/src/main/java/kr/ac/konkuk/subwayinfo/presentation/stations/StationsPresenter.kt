@@ -36,7 +36,7 @@ class StationsPresenter(
 
     override fun filterStations(query: String) {
         scope.launch {
-            //queryString 을 방출 -> 한번 더 observeStations가 호출
+            //queryString 을 방출 -> 한번 더 observeStations 가 호출
             queryString.emit(query)
         }
     }
@@ -82,7 +82,4 @@ class StationsPresenter(
             stationRepository.updateStation(station.copy(isFavorited = !station.isFavorited))
         }
     }
-
-
-
 }

@@ -2,7 +2,6 @@ package kr.ac.konkuk.subwayinfo.presentation.stationarrivals
 
 import android.os.Bundle
 import android.view.*
-import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -75,7 +74,7 @@ class StationArrivalsFragment : ScopeFragment(), StationArrivalsContract.View {
                 true
             }
             R.id.favoriteAction -> {
-                //즐겨찾기 이면
+                //즐겨찾기에 등록된 역일 경우
                 item.isChecked = !item.isChecked
                 item.setIcon(
                     if (item.isChecked) {

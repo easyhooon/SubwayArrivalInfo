@@ -9,9 +9,9 @@ import kr.ac.konkuk.subwayinfo.domain.Subway
 //확장 함수
 fun StationWithSubwaysEntity.toStation() =
     Station(
-    name = station.stationName,
-    isFavorited = station.isFavorited,
-    connectedSubways = subways.toSubways()
+        name = station.stationName,
+        isFavorited = station.isFavorited,
+        connectedSubways = subways.toSubways()
     )
 
 fun Station.toStationEntity() =

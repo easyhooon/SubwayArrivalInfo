@@ -9,7 +9,6 @@ import kr.ac.konkuk.subwayinfo.data.api.StationApi
 import kr.ac.konkuk.subwayinfo.data.api.StationArrivalsApi
 import kr.ac.konkuk.subwayinfo.data.api.StationStorageApi
 import kr.ac.konkuk.subwayinfo.data.api.Url
-import kr.ac.konkuk.subwayinfo.data.api.Url.SEOUL_DATA_API_URL
 import kr.ac.konkuk.subwayinfo.data.db.AppDatabase
 import kr.ac.konkuk.subwayinfo.data.preference.PreferenceManager
 import kr.ac.konkuk.subwayinfo.data.preference.SharedPreferenceManager

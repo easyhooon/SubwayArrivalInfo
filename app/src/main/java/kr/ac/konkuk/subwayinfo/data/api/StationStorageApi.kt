@@ -1,6 +1,5 @@
 package kr.ac.konkuk.subwayinfo.data.api
 
-import android.util.Pair
 import com.google.firebase.storage.FirebaseStorage
 import kotlinx.coroutines.tasks.await
 import kr.ac.konkuk.subwayinfo.data.db.entity.StationEntity
@@ -21,7 +20,7 @@ class StationStorageApi (
     //task 가 완료가 될 경우에는 deferred을 받아 값을 리턴하는 형태로 구현
 
     //await()를 사용하여 coroutine 스럽게 변환
-    override suspend fun getStationSubways(): List<kotlin.Pair<StationEntity, SubwayEntity>> {
+    override suspend fun getStationSubways(): List<Pair<StationEntity, SubwayEntity>> {
         //size 를 가져옴
         val downloadSizeBytes = sheetReference.metadata.await().sizeBytes
         //file download

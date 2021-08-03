@@ -27,7 +27,8 @@ fun RealtimeArrival.toArrivalInformation(): ArrivalInformation =
                 //현재 역과 이름이 동일하면 "당역"으로 교체
             ?.replace(statnNm.toString(), "당역")
                 //정규식을 통해 대괄호를 지움
-            ?.replace("[\\[\\]]".toRegex(),"") ?: INVALID_FIELD,
+            ?.replace("[\\[\\]]".toRegex(),"")
+            ?: INVALID_FIELD,
         updatedAt = recptnDt
             ?.let { apiDateFormat.parse(it)}
             ?.let { dateFormat.format(it)}
