@@ -1,2 +1,3 @@
-"# SubwayArrivalInfo""# SubwayArrivalInfo" 
-"# SubwayArrivalInfo" 
+"# SubwayArrivalInfo"
+
+Architecture patter: MVP
