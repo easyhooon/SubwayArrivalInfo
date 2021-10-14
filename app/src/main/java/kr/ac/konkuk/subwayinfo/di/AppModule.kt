@@ -15,6 +15,7 @@ import kr.ac.konkuk.subwayinfo.data.preference.SharedPreferenceManager
 import kr.ac.konkuk.subwayinfo.data.repository.StationRepository
 import kr.ac.konkuk.subwayinfo.data.repository.StationRepositoryImplement
 import kr.ac.konkuk.subwayinfo.presentation.stationarrivals.StationArrivalsContract
+import kr.ac.konkuk.subwayinfo.presentation.stationarrivals.StationArrivalsFragment
 import kr.ac.konkuk.subwayinfo.presentation.stationarrivals.StationArrivalsPresenter
 import kr.ac.konkuk.subwayinfo.presentation.stations.StationsContract
 import kr.ac.konkuk.subwayinfo.presentation.stations.StationsFragment
@@ -44,7 +45,7 @@ val appModule = module {
     single<PreferenceManager> { SharedPreferenceManager(get())}
 
     //Api
-    single{
+    single {
         OkHttpClient()
             .newBuilder()
             .addInterceptor(
@@ -69,7 +70,6 @@ val appModule = module {
             .create()
     }
 
-
     single<StationApi> { StationStorageApi(Firebase.storage) }
 
     //Repository
@@ -82,7 +82,7 @@ val appModule = module {
         //메모리 효율적 관리
         scoped<StationsContract.Presenter> { StationsPresenter(getSource(), get())}
     }
-    scope<StationsFragment> {
+    scope<StationArrivalsFragment> {
         scoped<StationArrivalsContract.Presenter> { StationArrivalsPresenter(getSource(), get(), get())
 
         }

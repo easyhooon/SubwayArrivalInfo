@@ -1,3 +1,3 @@
 "# SubwayArrivalInfo"
 
-Architecture patter: MVP
+Architecture pattern: MVP
