@@ -13,7 +13,7 @@ import kr.ac.konkuk.subwayinfo.data.db.AppDatabase
 import kr.ac.konkuk.subwayinfo.data.preference.PreferenceManager
 import kr.ac.konkuk.subwayinfo.data.preference.SharedPreferenceManager
 import kr.ac.konkuk.subwayinfo.data.repository.StationRepository
-import kr.ac.konkuk.subwayinfo.data.repository.StationRepositoryImplement
+import kr.ac.konkuk.subwayinfo.data.repository.StationRepositoryImpl
 import kr.ac.konkuk.subwayinfo.presentation.stationarrivals.StationArrivalsContract
 import kr.ac.konkuk.subwayinfo.presentation.stationarrivals.StationArrivalsFragment
 import kr.ac.konkuk.subwayinfo.presentation.stationarrivals.StationArrivalsPresenter
@@ -73,7 +73,7 @@ val appModule = module {
     single<StationApi> { StationStorageApi(Firebase.storage) }
 
     //Repository
-    single<StationRepository> { StationRepositoryImplement(get(), get(), get(), get(), get()) }
+    single<StationRepository> { StationRepositoryImpl(get(), get(), get(), get(), get()) }
 
     //Presentation
     scope<StationsFragment> {

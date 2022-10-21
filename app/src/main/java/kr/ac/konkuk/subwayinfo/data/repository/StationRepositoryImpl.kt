@@ -16,7 +16,7 @@ import kr.ac.konkuk.subwayinfo.data.preference.PreferenceManager
 import kr.ac.konkuk.subwayinfo.domain.ArrivalInformation
 import kr.ac.konkuk.subwayinfo.domain.Station
 
-class StationRepositoryImplement(
+class StationRepositoryImpl(
     private val stationArrivalsApi: StationArrivalsApi,
     private val stationApi: StationApi,
     private val stationDao: StationDao,
