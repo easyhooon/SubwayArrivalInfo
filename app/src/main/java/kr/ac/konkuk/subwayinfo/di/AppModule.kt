@@ -32,17 +32,17 @@ import retrofit2.create
 
 val appModule = module {
 
-    single {Dispatchers.IO}
+    single { Dispatchers.IO }
 
     //Database
     //AppDatabase 를 빌드
-    single { AppDatabase.build(androidApplication())}
+    single { AppDatabase.build(androidApplication()) }
     //주입받은 AppDatabase 를 통해 다시 Dao 를 따로 뽑아냄
-    single { get<AppDatabase>().stationDao()}
+    single { get<AppDatabase>().stationDao() }
 
     //Preference
     single { androidContext().getSharedPreferences("preference", Activity.MODE_PRIVATE) }
-    single<PreferenceManager> { SharedPreferenceManager(get())}
+    single<PreferenceManager> { SharedPreferenceManager(get()) }
 
     //Api
     single {
@@ -64,7 +64,7 @@ val appModule = module {
     single<StationArrivalsApi> {
         Retrofit.Builder().baseUrl(Url.SEOUL_DATA_API_URL)
             .addConverterFactory(GsonConverterFactory.create())
-                //get 을 통해 정의된 값을 주입
+            //get 을 통해 정의된 값을 주입
             .client(get())
             .build()
             .create()
@@ -78,12 +78,13 @@ val appModule = module {
     //Presentation
     scope<StationsFragment> {
         //프래그먼트가 종료되게 되면 내부의 presenter도 더이상 상요, 공유 못하는
-        //다만 scope 내에서는 scope된 애들끼리 얼마든지 서로 공유가 가능한 형태로 구성이 가능
+        //다만 scope 내에서는 scope 된 애들끼리 얼마든지 서로 공유가 가능한 형태로 구성이 가능
         //메모리 효율적 관리
-        scoped<StationsContract.Presenter> { StationsPresenter(getSource(), get())}
+        scoped<StationsContract.Presenter> { StationsPresenter(getSource(), get()) }
     }
     scope<StationArrivalsFragment> {
-        scoped<StationArrivalsContract.Presenter> { StationArrivalsPresenter(getSource(), get(), get())
+        scoped<StationArrivalsContract.Presenter> {
+            StationArrivalsPresenter(getSource(), get(), get())
 
         }
     }

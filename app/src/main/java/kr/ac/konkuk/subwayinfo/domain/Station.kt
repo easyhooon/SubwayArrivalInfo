@@ -1,11 +1,11 @@
 package kr.ac.konkuk.subwayinfo.domain
 
 import android.os.Parcelable
-import kotlinx.android.parcel.Parcelize
+import kotlinx.parcelize.Parcelize
 
 //entity 가 아닌 domain 으로 보기 편한 형태로 재정의
 
-//Navigation의 argumet의 model로 들어가기 위해선 parcelize 해야한다.
+//Navigation 의 argument 의 model 로 들어가기 위해선 parcelize 해야한다.
 
 @Parcelize
 data class Station(
